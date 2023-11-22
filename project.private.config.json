@@ -3,5 +3,6 @@
   "projectname": "xr-frame-guide",
   "setting": {
     "compileHotReLoad": true
-  }
+  },
+  "libVersion": "3.2.2"
 }

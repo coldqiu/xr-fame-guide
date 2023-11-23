@@ -1,0 +1,10 @@
+/* pages/door/index.wxss */
+.page {
+  padding: 45rpx;
+  text-align: center;
+  font-size: 50rpx;
+}
+
+button {
+  margin: 35rpx;
+}

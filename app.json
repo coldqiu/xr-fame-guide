@@ -3,7 +3,8 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/door/index"
+    "pages/door/index",
+    "pages/particle/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",

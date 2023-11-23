@@ -6,6 +6,8 @@
   background="#FFF"
 ></navigation-bar>
 <view class="page">
-    <view> 兔子洞 </view>
-    <button bind:tap="naviagteToPageIndex">AR 页面（session1）</button>
+  <view> 兔子洞 </view>
+  <button data-page="index" bind:tap="naviagteToPage">AR 页面（session1）</button>
+  <button data-page="particle" bind:tap="naviagteToPage">烟花 粒子特效（session2）</button>
 </view>
+

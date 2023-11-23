@@ -1,7 +1,9 @@
 {
+  "entryPagePath": "pages/door/index",
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/door/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",

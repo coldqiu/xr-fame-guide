@@ -1,0 +1,11 @@
+<!--pages/door/index.wxml-->
+<navigation-bar
+  title="Door"
+  back="{{false}}"
+  color="black"
+  background="#FFF"
+></navigation-bar>
+<view class="page">
+    <view> 兔子洞 </view>
+    <button bind:tap="naviagteToPageIndex">AR 页面（session1）</button>
+</view>

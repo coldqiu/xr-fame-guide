@@ -1,32 +1,20 @@
 <!--components/xr-start/index.wxml-->
-<xr-scene>
+<xr-scene ar-system="modes:Marker" bind:ready="handleReady">
   <xr-assets bind:progress="handleAssetsProgress" bind:loaded="handleAssetsLoaded">
-    <xr-asset-load
-      type="gltf"
-      asset-id="miku"
-      src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/miku.glb"
-    />
+    <xr-asset-load type="gltf" asset-id="butterfly" src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/butterfly/index.glb" />
   </xr-assets>
-  <xr-light
-    type="ambient"
-    color="1 1 1"
-    intensity="1"
-  />
-  <xr-light
-    type="directional"
-    rotation="40 70 0"
-    color="1 1 1"
-    intensity="3"
-    cast-shadow
-  />
-  <xr-gltf
-    model="miku"
-    position="-0.15 0.75 0"
-    scale="0.07 0.07 0.07"
-    rotation="0 180 0"
-    anim-autoplay
-  />
-  <xr-mesh
+  <xr-light  type="ambient" color="1 1 1"  intensity="1" />
+  <xr-light   type="directional"  rotation="40 70 0"  color="1 1 1"  intensity="3" cast-shadow/>
+
+  <xr-ar-tracker mode="Marker" src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/marker/2dmarker-test.jpg">
+    <xr-gltf model="butterfly" anim-autoplay position="0.2 0 -0.2" scale="0.6 0.6 0.6" rotation="0 -50 0"/>
+      <xr-gltf model="butterfly" anim-autoplay position="0.4 0 0.3" scale="0.5 0.5 0.5" rotation="0 -50 0" />
+      <xr-gltf model="butterfly" anim-autoplay position="-0.3 0 0.3" scale="0.4 0.4 0.4" rotation="0 -50 0" />
+  </xr-ar-tracker>
+  <xr-camera clear-color="0.4 0.8 0.6 1" background="ar" is-ar-camera/>
+</xr-scene>
+
+<!-- <xr-mesh
     node-id="cube"
     cast-shadow
     geometry="cube"
@@ -38,12 +26,10 @@
     receive-shadow
     geometry="plane"
     uniforms="u_baseColorFactor:0.4 0.6 0.8 1"
-  />
-  <xr-camera
-    clear-color="0.4 0.8 0.6 1"
-    position="0 1 4"
-    target="cube"
-    camera-orbit-control
-  />
-</xr-scene>
+  /> -->
+<!-- <xr-asset-load
+      type="gltf"
+      asset-id="miku"
+      src="https://mmbizwxaminiprogram-1258344707.cos.ap-guangzhou.myqcloud.com/xr-frame/demo/miku.glb"
+    /> -->
 

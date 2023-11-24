@@ -19,19 +19,19 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    // handleReady(e) {
-    //   console.log('handleReady: ', e);
-    // },
+    handleReady(e) {
+      console.log('handleReady: ', e);
+    },
     // handleARReady(e) {
     //   console.log('handleARReady: ', e);
     // },
     // handleError(e) {
     //   console.log('handleError: ', e);
     // },
-    handleAssetsProgress: function ({detail}) {
-      console.log('assets progress', detail.value);
+    handleAssetsProgress: function ({ detail }) {
+      // console.log('assets progress', detail.value);
     },
-    handleAssetsLoaded: function ({detail}) {
+    handleAssetsLoaded: function ({ detail }) {
       console.log('assets loaded', detail.value);
     }
   }
